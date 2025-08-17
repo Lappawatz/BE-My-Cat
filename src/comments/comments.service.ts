@@ -20,8 +20,8 @@ export class CommentsService {
     return result;
   }
 
-  async findOne(id: string): Promise<Comment | null> {
-    const result = await this.commentModel.findById(id).exec();
+  async findOne(catId: string): Promise<Comment | null> {
+    const result = await this.commentModel.findById({catId}).exec();
     return result;
   
   }
